@@ -22,7 +22,7 @@
 <form action = "{% url 'search' %}" method="get">
     <div class="form-group">
     <label for="exampleFormControlTextarea1">Please input barcode:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" input name="query" type="text"/></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" input name="query" type="text"/></textarea>
     <input type="submit" name="Submit" value="Search"/>
   </div>
 </form>
@@ -33,7 +33,7 @@
 <ul>
   {% for specimen in object_list %}
     <li>
-     {{ specimen.initial_ID }}  <br> {{specimen.dna_barcode}} </br>
+     <strong> {{ specimen.initial_ID }} </strong> <br> <small> {{ specimen.identity}} </small> </br>
      <br>
     </li>
   {% endfor %}

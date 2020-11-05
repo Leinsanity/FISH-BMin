@@ -99,8 +99,6 @@ class Status(models.Model):
     class Meta:
         verbose_name_plural = "Status"   
 
-# @with_author
-# @updated_by
 class Specimen(models.Model):
     collection_code = models.CharField(max_length=50, unique=True, help_text='Enter complete collection code')
     collection_date = models.ForeignKey(Collection_Date, on_delete=models.CASCADE)
